@@ -6,7 +6,6 @@ LucidCFW is a custom BIOS and system for [CC:Tweaked](https://github.com/cc-twea
 
 ## **Features**
 - Custom BIOS (`lucid.lua`) based on the CC:Tweaked BIOS.
-- Uninstaller BIOS (`unbios.lua`) for reverting to the original CraftOS environment.
 - Modified programs and APIs for extended functionality.
 - Fully customizable and open-source.
 
