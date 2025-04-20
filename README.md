@@ -26,7 +26,7 @@ LucidCFW is a custom BIOS and system for [CC:Tweaked](https://github.com/cc-twea
 2. **Run the Installer**:
    Copy the `install.lua` script to your computer and execute it:
    ```bash
-   wget run 
+   wget run https://raw.githubusercontent.com/Jannnn13/lucidcfw/refs/heads/main/install.lua
    ```
 
 3. **Follow the Prompts**:
