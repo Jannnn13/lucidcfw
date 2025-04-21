@@ -85,3 +85,5 @@ You can modify the following files to customize LucidCFW:
 
 ## **License**
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+
+<img src="https://raw.githubusercontent.com/Jannnn13/Jannnn13/output/snake.svg" alt="Snake animation" />
