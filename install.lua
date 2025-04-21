@@ -1,4 +1,3 @@
----@diagnostic disable: undefined-field
 --[[
     LucidCFW - Custom BIOS and System for CC:Tweaked
     https://github.com/Jannnn13/LucidCFW
@@ -192,7 +191,7 @@ local function patchBios(biosPath)
     local content = file.readAll()
     file.close()
 
-    local modified = content:gsub("return \"CraftOS 1.9\"", "return \"Lucid " .. lucidversion .. "\"")
+    local modified = content:gsub("return \"CraftOS 1.9\"", "return \"Lucid v" .. lucidversion .. "\"")
     local modified = modified:gsub("-- Load APIs", "-- Load APIs\nload_apis(\"lucid/apis\")")
     local modified = modified:gsub("rom", "lucid/rom")
 
