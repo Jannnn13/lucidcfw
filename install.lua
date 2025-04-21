@@ -38,6 +38,17 @@ local cfwRom = cfwroot .. "/rom"
 local programsPath = cfwRom .. "/programs"
 local unbiosUrl = "https://gist.githubusercontent.com/MCJack123/42bc69d3757226c966da752df80437dc/raw/887547d8283fbfe6693c6586566c16b79d47a6ae/unbios.lua"
 local biosUrl = "https://raw.githubusercontent.com/cc-tweaked/CC-Tweaked/mc-1.20.x/projects/core/src/main/resources/data/computercraft/lua/bios.lua"
+
+local ApiUrl = {
+    ui = "https://raw.githubusercontent.com/Jannnn13/lucidcfw/refs/heads/main/apis/UI.lua",
+    lucid = "https://raw.githubusercontent.com/Jannnn13/lucidcfw/refs/heads/main/apis/lucid.lua",
+    tcp = "https://raw.githubusercontent.com/Jannnn13/lucidcfw/refs/heads/main/apis/tcp.lua",
+}
+
+local ProgramUrl = {
+    craftos = "https://raw.githubusercontent.com/Jannnn13/lucidcfw/refs/heads/main/programs/craftos.lua",
+}
+
 local startupText = [[
 if os.version():find("Lucid") then return end
 
@@ -217,17 +228,17 @@ local function patchPrograms()
     editLine("/lucid/rom/programs/reboot.lua", 11, "")
 end
 
-local function copyApis()
-    local programsFiles = fs.list("/disk/apis")
-    for _, file in ipairs(programsFiles) do
-        fs.copy("/disk/apis/" .. file, "/lucid/apis/" .. file)
+local function downloadApis()
+    for name, url in pairs(ApiUrl) do
+        print("Downloading API: " .. name)
+        downloadFile(url, cfwroot .. "/apis/" .. name .. ".lua")
     end
 end
 
-local function copyPrograms()
-    local programsFiles = fs.list("/disk/programs")
-    for _, file in ipairs(programsFiles) do
-        fs.copy("/disk/programs/" .. file, "/lucid/rom/programs/" .. file)
+local function downloadPrograms()
+    for name, url in pairs(ProgramUrl) do
+        print("Downloading program: " .. name)
+        downloadFile(url, cfwRom .. "/programs/" .. name .. ".lua")
     end
 end
 
@@ -260,10 +271,10 @@ print("Patching programs")
 patchPrograms()
 
 print("Installing APIs")
-copyApis()
+downloadApis()
 
 print("Installing programs")
-copyPrograms()
+downloadPrograms()
 
 print("Writing startup script...")
 local startupFile = fs.open("/startup.lua", "w")
