@@ -204,7 +204,7 @@ local function patchBios(biosPath)
 
     local modified = content:gsub("return \"CraftOS 1.9\"", "return \"Lucid v" .. lucidversion .. "\"")
     local modified = modified:gsub("-- Load APIs", "-- Load APIs\nload_apis(\"lucid/apis\")")
-    local modified = modified:gsub("rom", "lucid/rom")
+    local modified = modified:gsub("rom/", "lucid/rom/")
 
     local override = fs.open(biosPath, "w")
     override.write(modified)

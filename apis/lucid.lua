@@ -39,4 +39,14 @@ function lucid.popsound() -- Plays a "Pop!" sound.
     end
 end
 
+local _original_pullEvent = os.pullEvent
+
+function lucid.allowTerminate(allowed) -- Allows or disallows the termination of the program.
+    if allowed then
+        os.pullEvent = _original_pullEvent
+    else
+        os.pullEvent = os.pullEventRaw
+    end
+end
+
 return lucid -- Return the Lucid API.
