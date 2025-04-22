@@ -43,7 +43,7 @@ After installation, the following file structure will be created:
 /lucid
 ├── bios
 │   ├── lucid.lua       # Custom BIOS
-│   ├── unbios.lua      # Uninstaller BIOS
+│   ├── unbios.lua      # Custom BIOS Loader
 ├── rom
 |   ├── Some stuff...   # Default BIOS
 ├── apis # Lucid APIs
