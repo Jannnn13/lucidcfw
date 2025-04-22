@@ -46,8 +46,8 @@ After installation, the following file structure will be created:
 │   ├── unbios.lua      # Custom BIOS Loader
 ├── rom
 |   ├── Some stuff...   # Default BIOS
-├── apis # Lucid APIs
-├── programs # Lucid Programs
+├── apis                # Lucid APIs
+├── programs            # Lucid Programs
 /startup.lua            # Startup script for LucidCFW
 ```
 
