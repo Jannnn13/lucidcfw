@@ -57,7 +57,7 @@ After installation, the following file structure will be created:
 You can modify the following files to customize LucidCFW:
 - `/lucid/bios/lucid.lua`: The main BIOS file.
 - `/lucid/rom/programs`: Add or modify programs.
-- `/lucid/rom/apis`: Add or modify APIs.
+- `/lucid/apis`: Add or modify APIs.
 
 ---
 
