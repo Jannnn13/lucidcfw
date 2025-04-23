@@ -229,6 +229,16 @@ local function patchPrograms()
     editLine("/lucid/rom/programs/advanced/multishell.lua", 329, "}, \"/lucid/rom/programs/shell.lua\")")
 
     editLine("/lucid/rom/programs/reboot.lua", 11, "")
+
+    local startup = fs.open("/lucid/rom/startup.lua", "r")
+    local startupc = startup.readAll()
+    startup.close()
+
+    local mstartup = startupc:gsub("rom/", "lucid/rom/")
+    local startup = fs.open("/lucid/rom/startup.lua", "w+")
+
+    startup.write(mstartup)
+    startup.close()
 end
 
 local function downloadApis()
