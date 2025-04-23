@@ -50,7 +50,13 @@ local ProgramUrl = {
 }
 
 local startupText = [[
-if os.version():find("Lucid") then return end
+if os.version():find("Lucid") then
+    shell.setPath(".:/lucid/rom/programs:/lucid/rom/programs/http:/lucid/rom/programs/advanced:/lucid/rom/programs/rednet:/lucid/rom/programs/fun:/lucid/rom/programs/fun/advanced")
+    if turtle then shell.setPath(shell.path() .. "/lucid/rom/programs/turtle") end
+    if pocket then shell.setPath(shell.path()) .. "/lucid/rom/programs/pocket" end
+
+    return
+end
 
 term.clear()
 term.setCursorPos(1, 1)
