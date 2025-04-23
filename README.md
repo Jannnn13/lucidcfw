@@ -5,6 +5,7 @@ LucidCFW is a custom BIOS and system for [CC:Tweaked](https://github.com/cc-twea
 ---
 
 ## **Features**
+
 - Custom BIOS (`lucid.lua`) based on the CC:Tweaked BIOS.
 - Modified programs and APIs for extended functionality.
 - Fully customizable and open-source.
@@ -14,16 +15,19 @@ LucidCFW is a custom BIOS and system for [CC:Tweaked](https://github.com/cc-twea
 ## **Installation**
 
 ### **Requirements**
+
 - [CC:Tweaked](https://github.com/cc-tweaked/CC-Tweaked) installed in your Minecraft world.
 - HTTP API enabled in ComputerCraft.
 - A disk drive with the required files (optional for custom programs/APIs).
 
 ### **Steps**
+
 1. **Enable HTTP API**:
    Ensure the HTTP API is enabled in your `ComputerCraft` configuration file.
 
 2. **Run the Installer**:
    Copy the `install.lua` script to your computer and execute it:
+
    ```bash
    wget run https://raw.githubusercontent.com/Jannnn13/lucidcfw/refs/heads/main/install.lua
    ```
@@ -38,8 +42,10 @@ LucidCFW is a custom BIOS and system for [CC:Tweaked](https://github.com/cc-twea
 ---
 
 ## **File Structure**
+
 After installation, the following file structure will be created:
-```
+
+```txt
 /lucid
 ├── bios
 │   ├── lucid.lua       # Custom BIOS
@@ -54,7 +60,9 @@ After installation, the following file structure will be created:
 ---
 
 ## **Customization**
+
 You can modify the following files to customize LucidCFW:
+
 - `/lucid/bios/lucid.lua`: The main BIOS file.
 - `/lucid/rom/programs`: Add or modify programs.
 - `/lucid/apis`: Add or modify APIs.
@@ -64,6 +72,7 @@ You can modify the following files to customize LucidCFW:
 ## **Troubleshooting**
 
 ### **Common Issues**
+
 1. **HTTP API Disabled**:
    - Ensure `http.enabled=true` is set in the `ComputerCraft` configuration file.
 
@@ -77,6 +86,7 @@ You can modify the following files to customize LucidCFW:
 ---
 
 ## **Credits**
+
 - **[CC:Tweaked Team](https://github.com/cc-tweaked/CC-Tweaked)**: Original CraftOS and BIOS.
 - **[MCJack123](https://gist.github.com/MCJack123)**: Author of `unbios.lua`.
 - **[Jannnn13](https://github.com/Jannnn13)** and **[Miko0187](https://github.com/Miko0187)**: Authors of LucidCFW.
@@ -84,6 +94,7 @@ You can modify the following files to customize LucidCFW:
 ---
 
 ## **License**
+
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
 <img src="https://raw.githubusercontent.com/Jannnn13/Jannnn13/output/snake.svg" alt="Snake animation" />
