@@ -290,7 +290,7 @@ print("Installing programs")
 downloadPrograms()
 
 print("Writing startup script...")
-local startupFile = fs.open("/startup.lua", "w")
+local startupFile = fs.open("/startup.lua", "w+")
 startupFile.write(startupText)
 startupFile.close()
 
