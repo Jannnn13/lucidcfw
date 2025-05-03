@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2025 Jannnn13 (https://github.com/Jannnn13) and Miko0187 (https://github.com/Miko0187)
+Copyright (c) 2025 Jannnn13 and Miko0187
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,15 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-LucidCFW includes the following third-party files:
-
-• `bios.lua` (MIT Licensed)  
-  Source: https://github.com/cc-tweaked/CC-Tweaked  
-  Copyright: CC:Tweaked Team
-
-• `unbios.lua` (License unknown or unspecified – used as-is from original author)  
-  Source: https://gist.github.com/MCJack123/42bc69d3757226c966da752df80437dc  
-  Author: MCJack123
-
-Note: The dependencies are not included in this repo, the installer just downloads and modifies them.
