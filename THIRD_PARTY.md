@@ -4,7 +4,7 @@ LucidCFW includes the following third-party files:
   Source: https://github.com/cc-tweaked/CC-Tweaked  
   Copyright: CC:Tweaked Team
 
-• `unbios.lua` (License unknown or unspecified – used as-is from original author)  
+• `unbios.lua` (MIT Licensed)  
   Source: https://gist.github.com/MCJack123/42bc69d3757226c966da752df80437dc  
   Author: MCJack123
 
