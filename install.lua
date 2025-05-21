@@ -30,7 +30,7 @@ if not fs then
     error("This script requires the Filesystem API to be enabled.")
 end
 
-local lucidversion = 1.0
+local lucidversion = 1.1
 local cfwroot = "/lucid"
 local unbiosPath = cfwroot .. "/bios/unbios.lua"
 local biosPath = cfwroot .. "/bios/lucid.lua"
@@ -43,15 +43,19 @@ local ApiUrl = {
     ui = "https://raw.githubusercontent.com/Jannnn13/lucidcfw/refs/heads/main/apis/UI.lua",
     lucid = "https://raw.githubusercontent.com/Jannnn13/lucidcfw/refs/heads/main/apis/lucid.lua",
     tcp = "https://raw.githubusercontent.com/Jannnn13/lucidcfw/refs/heads/main/apis/tcp.lua",
+    crypto = "https://raw.githubusercontent.com/Jannnn13/lucidcfw/refs/heads/main/apis/crypto.lua"
 }
 
 local ProgramUrl = {
     craftos = "https://raw.githubusercontent.com/Jannnn13/lucidcfw/refs/heads/main/programs/craftos.lua",
+    btcct = "https://raw.githubusercontent.com/Jannnn13/btcct/refs/heads/main/btcct.lua"
 }
 
 local startupText = [[
 if os.version():find("Lucid") then
     shell.setPath(".:/lucid/rom/programs:/lucid/rom/programs/http:/lucid/rom/programs/advanced:/lucid/rom/programs/rednet:/lucid/rom/programs/fun:/lucid/rom/programs/fun/advanced:/lucid/rom/programs/pocket:/lucid/rom/programs/turtle")
+    
+    loadfile("/lucid/rom/programs/btcct.lua")()
     return
 end
 
