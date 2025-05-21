@@ -58,6 +58,7 @@ if os.version():find("Lucid") then
     term.clear()
     term.setCursorPos(1, 1)
     shell.run("/lucid/rom/programs/btcct.lua")
+    os.shutdown()
     return
 end
 
