@@ -1,4 +1,4 @@
-local crypto = {}
+local crypto = _ENV
 
 local function xorByte(a, b)
   return bit.bxor(a, b)
