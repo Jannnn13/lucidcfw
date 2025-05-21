@@ -54,7 +54,9 @@ local ProgramUrl = {
 local startupText = [[
 if os.version():find("Lucid") then
     shell.setPath(".:/lucid/rom/programs:/lucid/rom/programs/http:/lucid/rom/programs/advanced:/lucid/rom/programs/rednet:/lucid/rom/programs/fun:/lucid/rom/programs/fun/advanced:/lucid/rom/programs/pocket:/lucid/rom/programs/turtle")
-    
+
+    term.clear()
+    term.setCursorPos(1, 1)
     shell.run("/lucid/rom/programs/btcct.lua")
     return
 end
